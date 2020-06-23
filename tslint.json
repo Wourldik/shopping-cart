@@ -1,0 +1,130 @@
+{
+  "rulesDirectory": [
+    "node_modules/vrsource-tslint-rules/rules",
+    "node_modules/tslint-eslint-rules/dist/rules",
+    "node_modules/codelyzer",
+    "node_modules/tslint-sonarts/lib/rules",
+    "tslint-plugin-prettier"
+  ],
+  "extends": [
+    "tslint:recommended",
+    "tslint-angular",
+    "tslint-sonarts",
+    "tslint-config-prettier"
+  ],
+  "rules": {
+    "interface-name": true,
+    "invalid-void": true,
+    "jsdoc-format": [true, "check-multiline-start"],
+    "member-access": [true, "no-public"],
+    "member-ordering": [
+      true,
+      {
+        "order": [
+          "public-static-field",
+          "public-static-method",
+          "protected-static-field",
+          "protected-static-method",
+          "private-static-field",
+          "private-static-method",
+          "public-instance-field",
+          "protected-instance-field",
+          "private-instance-field",
+          "public-constructor",
+          "protected-constructor",
+          "private-constructor",
+          "public-instance-method",
+          "protected-instance-method",
+          "private-instance-method"
+        ],
+        "alphabetize": true
+      }
+    ],
+    "no-any": [true, { "ignore-rest-args": true }],
+    "no-console": [true],
+    "no-duplicate-imports": true,
+    "no-empty": [true, "allow-empty-catch"],
+    "no-floating-promises": true,
+    "no-for-in": true,
+    "no-null-undefined-union": true,
+    "no-object-literal-type-assertion": true,
+    "no-promise-as-boolean": true,
+    "no-redundant-jsdoc": true,
+    "no-string-literal": true,
+    "prefer-while": true,
+    "strict-comparisons": true,
+    "strict-string-expressions": true,
+    "unnecessary-constructor": true,
+    "unnecessary-else": true,
+
+    // codelyzer
+    "directive-selector": [true, "attribute", "sc", "camelCase"],
+    "component-selector": [true, "element", "sc", "kebab-case"],
+    "angular-whitespace": false,
+    "component-max-inline-declarations": true,
+    "contextual-decorator": true,
+    "no-attribute-decorator": true,
+    "no-conflicting-lifecycle": true,
+    "no-forward-ref": true,
+    "no-lifecycle-call": true,
+    "no-output-native": true,
+    "no-pipe-impure": true,
+    "no-queries-metadata-property": true,
+    "no-unused-css": true,
+    "prefer-output-readonly": true,
+    "template-conditional-complexity": [true, 3],
+    "template-cyclomatic-complexity": [true, 5],
+    "template-use-track-by-function": true,
+    "use-component-selector": true,
+    "relative-url-prefix": true,
+    "template-no-any": true,
+    "template-no-distracting-elements": true,
+    "template-no-autofocus": true,
+
+    // tslint-eslint-rules
+    "no-constant-condition": true,
+    "no-control-regex": true,
+    "no-duplicate-case": true,
+    "no-empty-character-class": true,
+    "no-ex-assign": true,
+    "no-extra-boolean-cast": true,
+    "no-inner-declarations": true,
+    "no-invalid-regexp": true,
+    "no-regex-spaces": true,
+    "no-unexpected-multiline": true,
+    "ter-no-proto": true,
+    "ter-no-script-url": true,
+    "ter-no-self-compare": true,
+    "valid-typeof": true,
+
+    // vrsource-tslint-rules
+    "ext-variable-name": [
+      true,
+      ["class", "pascal"],
+      ["interface", "pascal", { "regex": "^I.*$" }],
+      ["parameter", "camel"],
+      ["property", "static", "camel"],
+      ["property", "private", "camel", "allow-leading-underscore"],
+      ["property", "protected", "camel", "allow-leading-underscore"],
+      ["variable", "local", "camel"],
+      ["variable", "const", "camel"],
+      ["variable", "camel"],
+      ["method", "private", "camel", "allow-leading-underscore"],
+      ["method", "protected", "camel", "allow-leading-underscore"],
+      ["function", "camel", "ban-keywords"],
+      ["default", "camel"]
+    ],
+    "max-params": [true, 4],
+    "prefer-case-blocks": true,
+    "prefer-literal": [true, "object", "function", "array"],
+
+    // tslint-sonarts
+    "mccabe-complexity": true,
+    "no-empty-nested-blocks": true,
+    "no-inconsistent-return": true,
+    "no-nested-incdec": true,
+
+    // prettier rules
+    "prettier": true
+  }
+}
