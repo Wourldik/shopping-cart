@@ -1,0 +1,35 @@
+@import '~src/styles/shared';
+
+$products-in-row: 3;
+$product-item-width: (100% / $products-in-row);
+$product-item-max-width: 384px;
+$products-container-width: ($product-item-max-width + $medium-grid-gap * 2) *
+  $products-in-row;
+
+:host {
+  @extend %grow-column;
+  width: 100%;
+  max-width: $products-container-width;
+  margin: 0 auto;
+}
+
+.product-list-container {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+}
+
+.products-list-wrapper {
+  flex-wrap: wrap;
+  flex-grow: 0;
+}
+
+.product-item {
+  flex: 0 1 $product-item-width;
+  min-width: 0;
+  max-width: $product-item-max-width;
+}

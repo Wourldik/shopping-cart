@@ -13,7 +13,9 @@
     "stylelint:css": "stylelint '**/*.{css,html}'",
     "tslint-check-conflict-rules": "tslint-config-prettier-check ./tslint.json",
     "lint-staged": "lint-staged -r -c lint-staged.linters.config.js",
-    "reformat-staged": "lint-staged -r -c lint-staged.prettier.config.js"
+    "reformat-staged": "lint-staged -r -c lint-staged.prettier.config.js",
+    "mock:server": "json-server --watch ./src/app/features/mock-api/data/db.json",
+    "start:mock:server": "concurrently --kill-others \"npm run mock:server\" \"npm run start\""
   },
   "private": true,
   "dependencies": {

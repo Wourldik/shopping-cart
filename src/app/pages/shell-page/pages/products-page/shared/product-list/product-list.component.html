@@ -1,0 +1,9 @@
+<div class="product-list-container">
+  <div class="flex-row products-list-wrapper">
+    <sc-product-item
+      *ngFor="let product of products; trackBy: trackByFn"
+      [product]="product"
+      class="product-item"
+    ></sc-product-item>
+  </div>
+</div>

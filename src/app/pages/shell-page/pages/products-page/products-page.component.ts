@@ -1,7 +1,9 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Product, Products } from './models';
 import { PageEvent } from '@angular/material/paginator';
+
+import { Products } from '../../../../features/http-data/entities/products/models';
+import { ProductsService } from '../../../../features/http-data/entities/products/services';
 
 @Component({
   selector: 'sc-products-page',
@@ -9,7 +11,7 @@ import { PageEvent } from '@angular/material/paginator';
   styleUrls: ['./products-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProductsPageComponent {
+export class ProductsPageComponent implements OnInit {
   get pageIndex(): number {
     // TODO
     return 0;
@@ -25,6 +27,12 @@ export class ProductsPageComponent {
   products$: Observable<Products | null>;
 
   totalProducts: number;
+
+  constructor(private productsService: ProductsService) {}
+
+  ngOnInit(): void {
+    this.products$ = this.productsService.getAll();
+  }
 
   onPageChanged(event: PageEvent): void {
     // TODO

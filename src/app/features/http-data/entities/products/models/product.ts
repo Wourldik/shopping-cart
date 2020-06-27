@@ -1,15 +1,17 @@
 import { IProduct, IProductBackend } from '../interfaces';
+import { Review } from './review';
 
 export class Product implements IProduct {
   static fromBackendFactory(obj: Readonly<IProductBackend>): Product {
     return new Product({
       descriptions: obj.descriptions,
+      shortDesc: obj.short_description,
       id: obj.id,
       image: obj.image,
       name: obj.name,
       price: obj.price,
       rate: obj.rate,
-      reviews: obj.reviews,
+      reviews: obj.reviews.map(review => Review.fromBackendFactory(review)),
     });
   }
 
@@ -19,7 +21,8 @@ export class Product implements IProduct {
   name: string;
   price: number;
   rate: number;
-  reviews: any[];
+  reviews: Review[];
+  shortDesc: string;
 
   constructor(obj: Readonly<IProduct>) {
     this.descriptions = obj.descriptions;
@@ -29,6 +32,7 @@ export class Product implements IProduct {
     this.price = obj.price;
     this.rate = obj.rate;
     this.reviews = obj.reviews;
+    this.shortDesc = obj.shortDesc;
   }
 }
 

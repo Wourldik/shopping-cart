@@ -1,3 +1,5 @@
+import { IReviewBackend } from './review-backend';
+
 export interface IProductBackend {
   descriptions: string;
   id: number;
@@ -5,6 +7,6 @@ export interface IProductBackend {
   name: string;
   price: number;
   rate: number;
-  // TODO
-  reviews: any[];
+  reviews: IReviewBackend[];
+  short_description: string;
 }

@@ -1,0 +1,61 @@
+@import '~src/styles/shared';
+
+$image-side-padding: 36px - $large-grid-gap;
+$max-image-size: 152px;
+$min-container-height: 272px;
+$goods-link-line-height: 16px;
+$dark-indigo: #0c1137;
+
+:host {
+  @extend %grow-column;
+  min-height: $min-container-height;
+  padding: $medium-grid-gap;
+}
+
+.goods-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: ($medium-grid-gap + $small-grid-gap) $large-grid-gap;
+  border: $border-size solid $border-color;
+}
+
+.goods-image-wrapper {
+  padding: $medium-grid-gap $image-side-padding;
+}
+
+.goods-image {
+  width: 100%;
+  padding-bottom: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.goods-link-wrapper {
+  display: flex;
+  flex-grow: 1;
+  padding: $medium-grid-gap 0;
+}
+
+.product-info-wrapper {
+  margin: $medium-grid-gap 0;
+}
+
+.goods-link {
+  // TODO: Sync with style guide
+  font-size: 16px;
+  line-height: $goods-link-line-height;
+}
+
+.goods-image-link {
+  display: flex;
+  max-width: $max-image-size;
+  margin: 0 auto;
+}
+
+// NOTE Button with 40px height absent in style guide
+.goods-button {
+  width: 100%;
+  margin-top: $medium-grid-gap;
+}

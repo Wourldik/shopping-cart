@@ -3,9 +3,9 @@ import { ErrorHandler, Injectable } from '@angular/core';
 import { isArray, isNull, isPlainObject } from 'lodash-es';
 import { Observable, of } from 'rxjs';
 
-import { stringify } from '@core/helpers';
 import { NotificationService } from '../../../notification';
 import { HttpDataModule } from '../../http-data.module';
+import { stringify } from '../../../../core/helpers/stringify';
 
 @Injectable({
   providedIn: HttpDataModule,

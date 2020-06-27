@@ -1,3 +1,5 @@
+import { Review } from '../models';
+
 export interface IProduct {
   descriptions: string;
   id: number;
@@ -5,6 +7,6 @@ export interface IProduct {
   name: string;
   price: number;
   rate: number;
-  // TODO
-  reviews: any[];
+  reviews: Review[];
+  shortDesc: string;
 }
