@@ -1,0 +1,9 @@
+@import 'src/styles/shared';
+
+$message-width: 256px;
+
+.snack-bar-message {
+  display: flex;
+  min-width: $message-width;
+  padding: 0 $medium-grid-gap;
+}

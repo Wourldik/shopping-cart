@@ -1,0 +1,50 @@
+@import 'src/styles/shared';
+
+$page-toolbar-height: 56px;
+
+:host {
+  display: flex;
+}
+
+.sc-toolbar-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: $medium-grid-gap;
+}
+
+.sc-page-toolbar {
+  & > {
+    & *:first-child {
+      padding-left: 0;
+    }
+
+    & .sc-toolbar-title:first-child {
+      padding-left: 16px;
+    }
+
+    & * + *:not(.mat-button):not(.mat-flat-button):not(.filler) {
+      padding-left: $medium-grid-gap;
+      padding-right: $medium-grid-gap;
+    }
+
+    /* prettier-ignore */
+    & *:last-child:not(.mat-button):not(.mat-flat-button):not(.sc-toolbar-title) {
+      padding-left: $medium-grid-gap;
+    }
+
+    .mat-button,
+    .mat-flat-button {
+      flex-shrink: 0;
+    }
+  }
+
+  .mat-paginator {
+    border: none;
+    border-bottom: $border-size solid $border-color;
+
+    .mat-paginator-container {
+      padding: 0;
+    }
+  }
+}

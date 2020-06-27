@@ -15,7 +15,8 @@
     "paths": {
       "@environment/environment": ["src/environments/environment"],
       "@shared/modules": ["src/app/shared/modules"],
-      "@layout/modules": ["src/app/layout/modules"]
+      "@layout/*": ["src/app/layout/*"],
+      "@features/*": ["src/app/features/*"]
     },
     "strict": true,
     "strictPropertyInitialization": false

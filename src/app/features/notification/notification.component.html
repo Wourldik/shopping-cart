@@ -1,0 +1,11 @@
+<mat-icon
+  [svgIcon]="data.isSuccess ? 'flashIconSuccess' : 'flashIconError'"
+></mat-icon>
+
+<span class="snack-bar-message">
+  {{ data.message }}
+</span>
+
+<button mat-icon-button (click)="onClose()">
+  <mat-icon [svgIcon]="'close'"></mat-icon>
+</button>

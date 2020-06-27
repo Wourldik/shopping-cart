@@ -6,13 +6,12 @@
 
   .logo-anchor {
     border-radius: 0;
-    width: auto;
-    height: 16px;
-    line-height: 16px;
     margin: 0 20px 0 $x-large-grid-gap;
 
     .logo {
-      line-height: 0;
+      width: auto;
+      height: 50px;
+      line-height: 50px;
       margin: 0;
     }
   }

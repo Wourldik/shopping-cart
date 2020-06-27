@@ -1,3 +1,3 @@
-import { MainToolbarModule } from './toolbar';
+import { MainToolbarModule, ToolbarModule } from './toolbar';
 
-export const layout = [MainToolbarModule];
+export const layout = [MainToolbarModule, ToolbarModule];
