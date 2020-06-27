@@ -1,0 +1,80 @@
+@import 'utils';
+
+/*******************************************************************************
+ * Layout
+ */
+
+.flex-row-only {
+  @extend %flex-row;
+}
+
+.flex-column-only {
+  @extend %flex-column;
+}
+
+.flex-row {
+  @extend %grow-row;
+}
+
+.flex-column {
+  @extend %grow-column;
+}
+
+.grow-row {
+  @extend %grow-row;
+}
+
+.grow-column {
+  @extend %grow-column;
+}
+
+.shrink-row {
+  @extend %shrink-row;
+}
+
+.shrink-column {
+  @extend %shrink-column;
+}
+
+.certain-row {
+  @extend %certain-row;
+}
+
+.certain-column {
+  @extend %certain-column;
+}
+
+.flex-center {
+  @extend %flex-center;
+}
+
+.filler {
+  @extend %flex-fill;
+  display: flex;
+}
+
+.half-width {
+  width: 50%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/*******************************************************************************
+ * Typography
+ */
+
+.text-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.break-word {
+  @extend %break-word;
+}
+
+.text-center {
+  text-align: center;
+}

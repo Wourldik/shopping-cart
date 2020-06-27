@@ -14,7 +14,8 @@
     "lib": ["es2018", "dom"],
     "paths": {
       "@environment/environment": ["src/environments/environment"],
-      "@shared/modules": ["src/app/shared/modules"]
+      "@shared/modules": ["src/app/shared/modules"],
+      "@layout/modules": ["src/app/layout/modules"]
     },
     "strict": true,
     "strictPropertyInitialization": false

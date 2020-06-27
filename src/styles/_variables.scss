@@ -1,0 +1,18 @@
+/*******************************************************************************
+ * Layout
+ */
+
+$container-width: 752px;
+
+$small-grid-gap: 4px;
+$medium-grid-gap: $small-grid-gap * 2;
+$large-grid-gap: $medium-grid-gap * 2;
+$x-large-grid-gap: $medium-grid-gap * 3;
+
+$border-size: 1px;
+
+/*******************************************************************************
+ * Typography
+ */
+
+$default-font-family-name: "Trebuchet MS", Helvetica, sans-serif;

@@ -1,0 +1,19 @@
+@import 'src/styles/shared';
+
+.main-toolbar {
+  font-size: 13px;
+  position: relative;
+
+  .logo-anchor {
+    border-radius: 0;
+    width: auto;
+    height: 16px;
+    line-height: 16px;
+    margin: 0 20px 0 $x-large-grid-gap;
+
+    .logo {
+      line-height: 0;
+      margin: 0;
+    }
+  }
+}
