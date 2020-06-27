@@ -13,6 +13,9 @@
     "tslint-config-prettier"
   ],
   "rules": {
+    "deprecation": {
+      "severity": "warning"
+    },
     "interface-name": true,
     "invalid-void": true,
     "jsdoc-format": [true, "check-multiline-start"],
