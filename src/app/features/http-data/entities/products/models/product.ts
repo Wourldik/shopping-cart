@@ -1,5 +1,6 @@
 import { IProduct, IProductBackend } from '../interfaces';
 import { Review } from './review';
+import { ProductType } from '../enums';
 
 export class Product implements IProduct {
   static fromBackendFactory(obj: Readonly<IProductBackend>): Product {
@@ -11,6 +12,7 @@ export class Product implements IProduct {
       name: obj.name,
       price: obj.price,
       rate: obj.rate,
+      type: obj.type,
       reviews: obj.reviews.map(review => Review.fromBackendFactory(review)),
     });
   }
@@ -23,10 +25,12 @@ export class Product implements IProduct {
   rate: number;
   reviews: Review[];
   shortDesc: string;
+  type: ProductType;
 
   constructor(obj: Readonly<IProduct>) {
     this.descriptions = obj.descriptions;
     this.id = obj.id;
+    this.type = obj.type;
     this.image = obj.image;
     this.name = obj.name;
     this.price = obj.price;

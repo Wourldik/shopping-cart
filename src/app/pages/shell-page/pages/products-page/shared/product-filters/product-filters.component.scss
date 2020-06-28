@@ -1,0 +1,12 @@
+@import '~src/styles/shared';
+
+$max-container-width: 272px;
+
+:host {
+  @extend %grow-column;
+  max-width: $max-container-width;
+  padding: $medium-grid-gap;
+  height: 100%;
+  flex: 1 0 auto;
+  background-color: white;
+}

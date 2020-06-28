@@ -58,7 +58,11 @@ $goods-link-line-height: 16px;
   margin: $medium-grid-gap 0;
 }
 
-.goods-link {
+.goods-header {
+  font-size: 18px;
+}
+
+.goods-desc {
   font-size: 16px;
   line-height: $goods-link-line-height;
 }
@@ -71,4 +75,8 @@ $goods-link-line-height: 16px;
 
 .product-buy-button {
   width: 100%;
+}
+
+.goods-dialog-content {
+  padding: $medium-grid-gap ($medium-grid-gap * 3);
 }

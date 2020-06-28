@@ -1,0 +1,31 @@
+<div class="cart-item-wrapper">
+  <div class="goods-image-wrapper">
+    <div class="goods-image" [style.background-image]="safeImageUrl"></div>
+  </div>
+
+  <div class="goods-link-wrapper flex-column">
+    <div class="product-info-wrapper flex-row">
+      <div class="product-info text-bold">
+        {{ product.name }}
+      </div>
+
+      <div class="filler"></div>
+
+      <div class="product-info text-bold">{{ product.price }} $</div>
+    </div>
+
+    <div class="flex-row">
+      <div class="description">
+        {{ product.shortDesc }}
+      </div>
+
+      <div class="filler"></div>
+    </div>
+  </div>
+
+  <div class="flex-row delete-button-wrapper">
+    <button mat-icon-button>
+      <mat-icon [svgIcon]="'close'"></mat-icon>
+    </button>
+  </div>
+</div>

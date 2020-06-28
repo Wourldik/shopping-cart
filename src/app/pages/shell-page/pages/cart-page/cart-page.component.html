@@ -1,1 +1,28 @@
-<p>cart-page works!</p>
+<ob-toolbar class="example-toolbar">
+  <h4 class="ob-toolbar-title">
+    Cart
+  </h4>
+
+  <div class="filler"></div>
+</ob-toolbar>
+
+<div class="flex-column goods-page-wrapper">
+  <ng-container *ngIf="products$ | async as product; else noData">
+    <sc-cart-list [products]="product"></sc-cart-list>
+  </ng-container>
+
+  <ng-template #noData>
+    <p class="text-capitalize text-center">
+      <ng-container *ngIf="loadingError; then loadedError; else loading">
+      </ng-container>
+
+      <ng-template #loadedError>
+        відбулась помилка при завантаженні товарів
+      </ng-template>
+
+      <ng-template #loading>
+        йде завантаження
+      </ng-template>
+    </p>
+  </ng-template>
+</div>

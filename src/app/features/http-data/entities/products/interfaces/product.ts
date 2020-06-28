@@ -1,4 +1,5 @@
 import { Review } from '../models';
+import { ProductType } from '../enums';
 
 export interface IProduct {
   descriptions: string;
@@ -9,4 +10,5 @@ export interface IProduct {
   rate: number;
   reviews: Review[];
   shortDesc: string;
+  type: ProductType;
 }

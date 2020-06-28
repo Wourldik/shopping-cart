@@ -6,6 +6,7 @@
       "price": 627.72,
       "image": "/assets/images/iphone11.jpeg",
       "name": "IPhone",
+      "type": "Phones",
       "short_description": "Best Apple phone",
       "descriptions": "This product is not Apple certified, but has been professionally inspected and tested by Amazon-qualified suppliers. The product may have minimal scratches or dents, and a battery with at least 80% capacity. Box may be generic and accessories may not be original, but will be compatible and fully functional. This product is eligible for a replacement or refund within 90 days of receipt if you are not satisfied.",
       "reviews": [
@@ -23,6 +24,7 @@
       "price": 186.6,
       "image": "/assets/images/tv.jpg",
       "name": "TV",
+      "type": "TVs",
       "short_description": "Best TV for films",
       "descriptions": "Pro:Centric SMART / Integrated Pro:Idiom DRM Technology\nUL Approved for Use in Patient Rooms\n4K Ultra HD\nCommercial Grade Stand (Except 65UV770H)\nNEW Dolby Vision High Dynamic Range (HDR) with HDR10 Compatibility",
       "reviews": [
@@ -46,6 +48,7 @@
       "price": 415.56,
       "image": "/assets/images/lawn-mover.jpg",
       "name": "Lawn-mower",
+      "type": "Appliances",
       "short_description": "Cool and fast lawn-mover",
       "descriptions": "16\" Cutting width, 7-blade ball bearing reel, and 10\" Composite wheels; unbreakable Steel side plate\nIdeal for cutting bent grass- Bermuda, Zoysia, Centipede, St. Augustine, and Seashore paspalum\nBlades are made of Alloy Steel for staying sharp longer\nAdjustable cutting Height of 0.5\"-2.5\" For a clean, even cut every time\nEco-friendly alternative to gas-powered lawn and garden equipment",
       "reviews": [
@@ -69,6 +72,7 @@
       "price": 174.71,
       "name": "Video game",
       "image": "/assets/images/video-game.jpg",
+      "type": "Video Games",
       "short_description": "New popular video game",
       "description": "A Complex & Emotional Story-Experience the escalating moral conflicts created by Ellie's relentless pursuit of vengeance. The cycle of violence left in her wake will challenge your notions of right versus wrong, good versus evil, and hero versus villain.",
       "reviews": [
@@ -89,10 +93,11 @@
     {
       "id": 5,
       "rate": 4,
-      "price": 158.9717,
+      "price": 158.97,
       "name": "Monitor",
       "short_description": "Best monitor for work",
       "image": "/assets/images/monitor.jpg",
+      "type": "TVs",
       "descriptions": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display\nAnd Radeon free sync technology. No compatibility for VESA Mount\nRefresh rate: 75Hz - Using HDMI port\nZero-frame design | ultra-thin | 4ms response time | IPS panel\nPorts: 1 x HDMI & 1 x VGA\nAspect ratio - 16: 9. Color supported - 16. 7 million colors. Brightness - 250 nit\nTilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree\n75 hertz",
       "reviews": [
         {

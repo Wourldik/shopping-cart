@@ -1,0 +1,44 @@
+@import '~src/styles/shared';
+
+$products-container-width: 1200px;
+$total-container-height: 50px;
+
+:host {
+  @extend %grow-column;
+  width: 100%;
+  max-width: $products-container-width;
+  margin: 0 auto;
+}
+
+.product-list-container {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+}
+
+.products-list-wrapper {
+  flex-wrap: wrap;
+  flex-grow: 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+.product-item {
+  flex: 0 1 100%;
+}
+
+.total-price-wrapper {
+  height: $total-container-height;
+  padding: $medium-grid-gap;
+}
+
+.total-price-container {
+  align-items: center;
+  background-color: white;
+  border: $border-size solid $border-color;
+  padding: $medium-grid-gap 20px;
+}

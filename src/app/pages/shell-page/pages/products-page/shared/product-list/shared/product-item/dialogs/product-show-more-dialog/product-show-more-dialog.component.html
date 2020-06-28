@@ -8,7 +8,7 @@
   </button>
 </div>
 
-<mat-dialog-content>
+<mat-dialog-content class="goods-dialog-content">
   <div class="goods-container">
     <div class="goods-image-wrapper">
       <div class="goods-image-link">
@@ -17,24 +17,24 @@
     </div>
 
     <div class="goods-link-wrapper flex-column">
-      <div class="product-info-wrapper flex-row">
-        <div class="goods-link">
+      <div class="product-info-wrapper flex-row text-bold">
+        <div class="goods-header">
           {{ product.name }}
         </div>
 
         <div class="filler"></div>
 
-        <div class="goods-link">{{ product.price }} $</div>
+        <div class="goods-header">{{ product.price }} $</div>
       </div>
 
-      <div class="flex-row">
-        <div class="goods-link">
+      <div class="flex-row text-bold">
+        <div class="goods-desc">
           {{ product.shortDesc }}
         </div>
 
         <div class="filler"></div>
 
-        <div class="goods-link">{{ product.rate }} / 5</div>
+        <div class="goods-desc">{{ product.rate }} / 5</div>
       </div>
     </div>
 

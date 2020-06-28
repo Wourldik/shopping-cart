@@ -1,0 +1,21 @@
+<div class="product-list-container">
+  <div class="flex-row products-list-wrapper">
+    <sc-cart-item
+      *ngFor="let product of products; trackBy: trackByFn"
+      [product]="product"
+      class="product-item"
+    ></sc-cart-item>
+
+    <div class="total-price-wrapper flex-column">
+      <div class="total-price-container flex-row text-bold">
+        <div class="description">
+          Total:
+        </div>
+
+        <div class="filler"></div>
+
+        <div>{{ totalPrice | number: '1.0-2' }} $</div>
+      </div>
+    </div>
+  </div>
+</div>

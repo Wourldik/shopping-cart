@@ -1,0 +1,11 @@
+@import '~src/styles/shared';
+
+:host {
+  @extend %grow-column;
+}
+
+.goods-page-wrapper {
+  height: 0;
+  padding: $medium-grid-gap;
+  overflow: auto;
+}
