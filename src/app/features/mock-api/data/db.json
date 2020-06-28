@@ -11,9 +11,9 @@
       "reviews": [
         {
           "id": 1,
-          "userComment": "Cool!",
-          "userName": "Craig Hensley",
-          "userRate": "4"
+          "user_comment": "Cool!",
+          "user_name": "Craig Hensley",
+          "user_rate": "4"
         }
       ]
     },
@@ -28,15 +28,15 @@
       "reviews": [
         {
           "id": 1,
-          "userComment": "Very good TV!",
-          "userName": "Angela Owen",
-          "userRate": "4"
+          "user_comment": "Very good TV!",
+          "user_name": "Angela Owen",
+          "user_rate": "4"
         },
         {
           "id": 2,
-          "userComment": "I like it!",
-          "userName": "Robert Beck",
-          "userRate": "4"
+          "user_comment": "I like it!",
+          "user_name": "Robert Beck",
+          "user_rate": "4"
         }
       ]
     },
@@ -51,15 +51,15 @@
       "reviews": [
         {
           "id": 1,
-          "userComment": "Not the best...",
-          "userName": "Angela Owen",
-          "userRate": "3"
+          "user_comment": "Not the best...",
+          "user_name": "Angela Owen",
+          "user_rate": "3"
         },
         {
           "id": 2,
-          "userComment": "Can be better",
-          "userName": "Tamara Hamrick",
-          "userRate": "3"
+          "user_comment": "Can be better",
+          "user_name": "Tamara Hamrick",
+          "user_rate": "3"
         }
       ]
     },
@@ -74,15 +74,15 @@
       "reviews": [
         {
           "id": 1,
-          "userComment": "Love it!",
-          "userName": "Angela Owen",
-          "userRate": "5"
+          "user_comment": "Love it!",
+          "user_name": "Angela Owen",
+          "user_rate": "5"
         },
         {
           "id": 2,
-          "userComment": "Best video game!",
-          "userName": "Steve Fisher",
-          "userRate": "5"
+          "user_comment": "Best video game!",
+          "user_name": "Steve Fisher",
+          "user_rate": "5"
         }
       ]
     },
@@ -97,15 +97,15 @@
       "reviews": [
         {
           "id": 1,
-          "userComment": "Great for work",
-          "userName": "Chris Lowry",
-          "userRate": "4"
+          "user_comment": "Great for work",
+          "user_name": "Chris Lowry",
+          "user_rate": "4"
         },
         {
           "id": 2,
-          "userComment": "Nice",
-          "userName": "Steve Fisher",
-          "userRate": "4"
+          "user_comment": "Nice",
+          "user_name": "Steve Fisher",
+          "user_rate": "4"
         }
       ]
     }

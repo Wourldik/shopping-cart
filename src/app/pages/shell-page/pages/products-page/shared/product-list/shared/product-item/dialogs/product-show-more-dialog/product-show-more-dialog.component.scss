@@ -1,15 +1,31 @@
 @import '~src/styles/shared';
 
+$mat-dialog-padding: 24px;
 $image-side-padding: 36px - $large-grid-gap;
 $max-image-size: 152px;
 $min-container-height: 272px;
 $goods-link-line-height: 16px;
-$dark-indigo: #0c1137;
 
 :host {
   @extend %grow-column;
   min-height: $min-container-height;
   padding: $medium-grid-gap;
+}
+
+.sc-dialog-title {
+  margin: (-$mat-dialog-padding) (-$mat-dialog-padding) 0;
+  border-bottom: $border-size solid $border-color;
+  padding: $large-grid-gap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .mat-dialog-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+  }
 }
 
 .goods-container {
@@ -18,7 +34,6 @@ $dark-indigo: #0c1137;
   flex-direction: column;
   padding: ($medium-grid-gap + $small-grid-gap) $large-grid-gap;
   border: $border-size solid $border-color;
-  background-color: white;
 }
 
 .goods-image-wrapper {
@@ -54,7 +69,6 @@ $dark-indigo: #0c1137;
   margin: 0 auto;
 }
 
-.goods-button {
+.product-buy-button {
   width: 100%;
-  margin-top: $medium-grid-gap;
 }

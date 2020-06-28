@@ -1,0 +1,13 @@
+@import '~src/styles/shared';
+
+:host {
+  @extend %grow-column;
+}
+
+.reviews-header {
+  margin-bottom: $medium-grid-gap;
+}
+
+.product-review-item:not(:last-child) {
+  margin-bottom: $medium-grid-gap;
+}

@@ -1,0 +1,9 @@
+<h3 class="reviews-header">
+  Reviews:
+</h3>
+
+<sc-product-review-item
+  class="product-review-item"
+  *ngFor="let review of reviews; trackBy: trackByFn"
+  [review]="review"
+></sc-product-review-item>
