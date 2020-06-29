@@ -51,7 +51,12 @@
 </mat-dialog-content>
 
 <mat-dialog-actions>
-  <button class="product-buy-button" mat-flat-button [color]="'primary'">
+  <button
+    class="product-buy-button"
+    mat-flat-button
+    [color]="'primary'"
+    (click)="onSelect(product)"
+  >
     Buy now
   </button>
 </mat-dialog-actions>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 import {
   Review,
@@ -9,6 +9,7 @@ import {
   selector: 'sc-product-review-list',
   templateUrl: './product-review-list.component.html',
   styleUrls: ['./product-review-list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductReviewListComponent {
   @Input()

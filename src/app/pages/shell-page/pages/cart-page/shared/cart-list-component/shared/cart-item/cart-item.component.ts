@@ -1,16 +1,27 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+} from '@angular/core';
+import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 
 import { Product } from '../../../../../../../../features/http-data/entities/products/models';
-import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 
 @Component({
   selector: 'sc-cart-item',
   templateUrl: './cart-item.component.html',
   styleUrls: ['./cart-item.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CartItemComponent implements OnInit {
   @Input()
   product: Product;
+
+  @Output()
+  readonly removed = new EventEmitter<Product>();
 
   safeImageUrl: SafeStyle;
 
@@ -24,5 +35,9 @@ export class CartItemComponent implements OnInit {
 
   ngOnInit() {
     this.createSafeUrls();
+  }
+
+  onRemove(product: Product): void {
+    this.removed.emit(product);
   }
 }

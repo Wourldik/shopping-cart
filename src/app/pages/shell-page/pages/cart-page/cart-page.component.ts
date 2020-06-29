@@ -1,21 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Store } from '@ngrx/store';
 
 import {
   Product,
   Products,
 } from '../../../../features/http-data/entities/products/models';
-import { IProductBackend } from '../../../../features/http-data/entities/products/interfaces';
-import { environment } from '../../../../../environments/environment';
-import { ApiUrl } from '../../../../features/http-data/enums';
-import { catchError, map } from 'rxjs/operators';
-import { HttpClient } from '@angular/common/http';
-import { HttpUtilityService } from '../../../../features/http-data/utils/internal';
+import { IState } from '../../../../features/store/cart/reducers';
+import {
+  DeleteFromCart,
+  LoadCart,
+} from '../../../../features/store/cart/actions';
+import { getData } from '../../../../features/store/cart/selectors';
 
 @Component({
   selector: 'sc-cart-page',
   templateUrl: './cart-page.component.html',
   styleUrls: ['./cart-page.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CartPageComponent implements OnInit {
   loadingError = false;
@@ -24,24 +26,14 @@ export class CartPageComponent implements OnInit {
 
   totalProducts: number;
 
-  // NOTE Delete after implementing store
-  constructor(
-    private httpClient: HttpClient,
-    private httpUtilityService: HttpUtilityService
-  ) {}
+  constructor(private store: Store<IState>) {}
 
   ngOnInit(): void {
-    this.products$ = this.httpClient
-      .get<IProductBackend[]>(`${environment.apiPath}${ApiUrl.product}`)
-      .pipe(
-        map(res =>
-          this.httpUtilityService.isResponseArray(
-            res,
-            `Error during get all cart products`
-          )
-        ),
-        map(res => res.map(product => Product.fromBackendFactory(product))),
-        catchError(err => this.httpUtilityService.handleError(err))
-      );
+    this.products$ = this.store.select(getData);
+    this.store.dispatch(new LoadCart());
+  }
+
+  onRemove(product: Product): void {
+    this.store.dispatch(new DeleteFromCart(product));
   }
 }

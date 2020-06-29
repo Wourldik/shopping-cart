@@ -12,7 +12,10 @@ export class OpenProductShowMoreDialogService implements OnDestroy {
 
   private readonly destroyed$ = new Subject<void>();
 
-  private dialogRef: MatDialogRef<ProductShowMoreDialogComponent> | null = null;
+  private dialogRef: MatDialogRef<
+    ProductShowMoreDialogComponent,
+    Product
+  > | null = null;
 
   constructor(private dialog: MatDialog) {}
 
@@ -29,10 +32,10 @@ export class OpenProductShowMoreDialogService implements OnDestroy {
     this.destroyed$.complete();
   }
 
-  open<R>(cb: (res: R | undefined) => void, product: Product): void {
+  open(cb: (res: Product | undefined) => void, product: Product): void {
     this.close();
 
-    this.dialogRef = this.dialog.open<ProductShowMoreDialogComponent>(
+    this.dialogRef = this.dialog.open<ProductShowMoreDialogComponent, Product>(
       this.content,
       { minWidth: 320, width: '480px', maxWidth: '80vw', data: product }
     );

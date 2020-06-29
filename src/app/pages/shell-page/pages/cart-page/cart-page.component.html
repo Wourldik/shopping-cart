@@ -8,7 +8,10 @@
 
 <div class="flex-column goods-page-wrapper">
   <ng-container *ngIf="products$ | async as product; else noData">
-    <sc-cart-list [products]="product"></sc-cart-list>
+    <sc-cart-list
+      [products]="product"
+      (removed)="onRemove($event)"
+    ></sc-cart-list>
   </ng-container>
 
   <ng-template #noData>

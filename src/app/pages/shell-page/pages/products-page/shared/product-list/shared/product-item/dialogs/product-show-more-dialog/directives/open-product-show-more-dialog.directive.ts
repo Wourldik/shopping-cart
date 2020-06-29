@@ -14,9 +14,8 @@ import { Product } from '../../../../../../../../../../../features/http-data/ent
   providers: [OpenProductShowMoreDialogService],
 })
 export class OpenProductShowMoreDialogDirective {
-  // TODO Add output type
   @Output()
-  readonly addedToCart = new EventEmitter<void>();
+  readonly addedToCart = new EventEmitter<Product>();
 
   @Input()
   product: Product;
@@ -25,9 +24,9 @@ export class OpenProductShowMoreDialogDirective {
 
   @HostListener('click')
   open() {
-    this.dialogService.open<any>(res => {
+    this.dialogService.open(res => {
       if (res) {
-        this.addedToCart.emit();
+        this.addedToCart.emit(res);
       }
     }, this.product);
   }

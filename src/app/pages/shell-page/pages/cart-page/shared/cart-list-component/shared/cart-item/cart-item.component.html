@@ -24,7 +24,7 @@
   </div>
 
   <div class="flex-row delete-button-wrapper">
-    <button mat-icon-button>
+    <button mat-icon-button (click)="onRemove(product)">
       <mat-icon [svgIcon]="'close'"></mat-icon>
     </button>
   </div>
