@@ -13,12 +13,10 @@ import {
   DeleteFromCartFail,
   DeleteFromCartSuccess,
   LOAD_CART,
-  LoadCart,
   LoadCartFail,
   LoadCartSuccess,
 } from '../actions';
 import { CartService } from '../services/cart.service';
-import { getRandomId } from '../../../../core/helpers/get-random-id';
 
 @Injectable()
 export class CartEffects {
@@ -27,11 +25,8 @@ export class CartEffects {
       ofType(ADD_TO_CART),
       map((action: AddToCart) => action.payload),
       switchMap(product => {
-        // NOTE For correct work with json-server
-        const productWithUnicId = { ...product, id: getRandomId(1, 5000) };
-
-        return this.cartService.add(productWithUnicId).pipe(
-          map(() => new AddToCartSuccess(productWithUnicId)),
+        return this.cartService.add(product).pipe(
+          map(() => new AddToCartSuccess(product)),
           catchError(err => of(new AddToCartFail(err)))
         );
       }),

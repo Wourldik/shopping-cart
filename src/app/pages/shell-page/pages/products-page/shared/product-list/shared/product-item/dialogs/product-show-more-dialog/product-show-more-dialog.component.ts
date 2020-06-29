@@ -8,7 +8,7 @@ import {
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 import { Store } from '@ngrx/store';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 import { Product } from '../../../../../../../../../../features/http-data/entities/products/models';
 import { IState } from '../../../../../../../../../../features/store/cart/reducers';
@@ -17,8 +17,10 @@ import { NotificationService } from '../../../../../../../../../../features/noti
 import {
   ADD_TO_CART_SUCCESS,
   AddToCart,
+  LoadCart,
 } from '../../../../../../../../../../features/store/cart/actions';
-import { filter, takeUntil, tap } from 'rxjs/operators';
+import { filter, map, takeUntil, tap } from 'rxjs/operators';
+import { getData } from '../../../../../../../../../../features/store/cart/selectors';
 
 @Component({
   selector: 'sc-product-show-more-dialog',
@@ -27,6 +29,8 @@ import { filter, takeUntil, tap } from 'rxjs/operators';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductShowMoreDialogComponent implements OnInit, OnDestroy {
+  itemInCart$: Observable<Product[]> | null = null;
+
   readonly product: Product;
 
   safeImageUrl: SafeStyle;
@@ -51,6 +55,12 @@ export class ProductShowMoreDialogComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.createSafeUrls();
+
+    this.itemInCart$ = this.store
+      .select(getData)
+      .pipe(map(product => product.filter(p => p.id === this.product.id)));
+
+    this.store.dispatch(new LoadCart());
   }
 
   onSelect(product: Product): void {

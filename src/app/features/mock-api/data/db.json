@@ -1,80 +1,8 @@
 {
   "usercart": [
     {
-      "descriptions": "Pro:Centric SMART / Integrated Pro:Idiom DRM Technology\nUL Approved for Use in Patient Rooms\n4K Ultra HD\nCommercial Grade Stand (Except 65UV770H)\nNEW Dolby Vision High Dynamic Range (HDR) with HDR10 Compatibility",
-      "id": 1934,
-      "type": "TVs",
-      "image": "/assets/images/tv.jpg",
-      "name": "TV",
-      "price": 186.6,
-      "rate": 4,
-      "reviews": [
-        {
-          "id": 1,
-          "userComment": "Very good TV!",
-          "userName": "Angela Owen",
-          "userRate": "4"
-        },
-        {
-          "id": 2,
-          "userComment": "I like it!",
-          "userName": "Robert Beck",
-          "userRate": "4"
-        }
-      ],
-      "shortDesc": "Best TV for films"
-    },
-    {
-      "descriptions": "Pro:Centric SMART / Integrated Pro:Idiom DRM Technology\nUL Approved for Use in Patient Rooms\n4K Ultra HD\nCommercial Grade Stand (Except 65UV770H)\nNEW Dolby Vision High Dynamic Range (HDR) with HDR10 Compatibility",
-      "id": 1593,
-      "type": "TVs",
-      "image": "/assets/images/tv.jpg",
-      "name": "TV",
-      "price": 186.6,
-      "rate": 4,
-      "reviews": [
-        {
-          "id": 1,
-          "userComment": "Very good TV!",
-          "userName": "Angela Owen",
-          "userRate": "4"
-        },
-        {
-          "id": 2,
-          "userComment": "I like it!",
-          "userName": "Robert Beck",
-          "userRate": "4"
-        }
-      ],
-      "shortDesc": "Best TV for films"
-    },
-    {
-      "descriptions": "Pro:Centric SMART / Integrated Pro:Idiom DRM Technology\nUL Approved for Use in Patient Rooms\n4K Ultra HD\nCommercial Grade Stand (Except 65UV770H)\nNEW Dolby Vision High Dynamic Range (HDR) with HDR10 Compatibility",
-      "id": 4855,
-      "type": "TVs",
-      "image": "/assets/images/tv.jpg",
-      "name": "TV",
-      "price": 186.6,
-      "rate": 4,
-      "reviews": [
-        {
-          "id": 1,
-          "userComment": "Very good TV!",
-          "userName": "Angela Owen",
-          "userRate": "4"
-        },
-        {
-          "id": 2,
-          "userComment": "I like it!",
-          "userName": "Robert Beck",
-          "userRate": "4"
-        }
-      ],
-      "shortDesc": "Best TV for films"
-    },
-    {
       "descriptions": "16\" Cutting width, 7-blade ball bearing reel, and 10\" Composite wheels; unbreakable Steel side plate\nIdeal for cutting bent grass- Bermuda, Zoysia, Centipede, St. Augustine, and Seashore paspalum\nBlades are made of Alloy Steel for staying sharp longer\nAdjustable cutting Height of 0.5\"-2.5\" For a clean, even cut every time\nEco-friendly alternative to gas-powered lawn and garden equipment",
-      "id": 216,
+      "id": 3,
       "type": "Appliances",
       "image": "/assets/images/lawn-mover.jpg",
       "name": "Lawn-mower",
@@ -98,7 +26,7 @@
     },
     {
       "descriptions": "Pro:Centric SMART / Integrated Pro:Idiom DRM Technology\nUL Approved for Use in Patient Rooms\n4K Ultra HD\nCommercial Grade Stand (Except 65UV770H)\nNEW Dolby Vision High Dynamic Range (HDR) with HDR10 Compatibility",
-      "id": 328,
+      "id": 2,
       "type": "TVs",
       "image": "/assets/images/tv.jpg",
       "name": "TV",
@@ -119,126 +47,6 @@
         }
       ],
       "shortDesc": "Best TV for films"
-    },
-    {
-      "descriptions": "Pro:Centric SMART / Integrated Pro:Idiom DRM Technology\nUL Approved for Use in Patient Rooms\n4K Ultra HD\nCommercial Grade Stand (Except 65UV770H)\nNEW Dolby Vision High Dynamic Range (HDR) with HDR10 Compatibility",
-      "id": 2844,
-      "type": "TVs",
-      "image": "/assets/images/tv.jpg",
-      "name": "TV",
-      "price": 186.6,
-      "rate": 4,
-      "reviews": [
-        {
-          "id": 1,
-          "userComment": "Very good TV!",
-          "userName": "Angela Owen",
-          "userRate": "4"
-        },
-        {
-          "id": 2,
-          "userComment": "I like it!",
-          "userName": "Robert Beck",
-          "userRate": "4"
-        }
-      ],
-      "shortDesc": "Best TV for films"
-    },
-    {
-      "descriptions": "Pro:Centric SMART / Integrated Pro:Idiom DRM Technology\nUL Approved for Use in Patient Rooms\n4K Ultra HD\nCommercial Grade Stand (Except 65UV770H)\nNEW Dolby Vision High Dynamic Range (HDR) with HDR10 Compatibility",
-      "id": 2702,
-      "type": "TVs",
-      "image": "/assets/images/tv.jpg",
-      "name": "TV",
-      "price": 186.6,
-      "rate": 4,
-      "reviews": [
-        {
-          "id": 1,
-          "userComment": "Very good TV!",
-          "userName": "Angela Owen",
-          "userRate": "4"
-        },
-        {
-          "id": 2,
-          "userComment": "I like it!",
-          "userName": "Robert Beck",
-          "userRate": "4"
-        }
-      ],
-      "shortDesc": "Best TV for films"
-    },
-    {
-      "descriptions": "Pro:Centric SMART / Integrated Pro:Idiom DRM Technology\nUL Approved for Use in Patient Rooms\n4K Ultra HD\nCommercial Grade Stand (Except 65UV770H)\nNEW Dolby Vision High Dynamic Range (HDR) with HDR10 Compatibility",
-      "id": 3133,
-      "type": "TVs",
-      "image": "/assets/images/tv.jpg",
-      "name": "TV",
-      "price": 186.6,
-      "rate": 4,
-      "reviews": [
-        {
-          "id": 1,
-          "userComment": "Very good TV!",
-          "userName": "Angela Owen",
-          "userRate": "4"
-        },
-        {
-          "id": 2,
-          "userComment": "I like it!",
-          "userName": "Robert Beck",
-          "userRate": "4"
-        }
-      ],
-      "shortDesc": "Best TV for films"
-    },
-    {
-      "descriptions": "16\" Cutting width, 7-blade ball bearing reel, and 10\" Composite wheels; unbreakable Steel side plate\nIdeal for cutting bent grass- Bermuda, Zoysia, Centipede, St. Augustine, and Seashore paspalum\nBlades are made of Alloy Steel for staying sharp longer\nAdjustable cutting Height of 0.5\"-2.5\" For a clean, even cut every time\nEco-friendly alternative to gas-powered lawn and garden equipment",
-      "id": 2822,
-      "type": "Appliances",
-      "image": "/assets/images/lawn-mover.jpg",
-      "name": "Lawn-mower",
-      "price": 415.56,
-      "rate": 3,
-      "reviews": [
-        {
-          "id": 1,
-          "userComment": "Not the best...",
-          "userName": "Angela Owen",
-          "userRate": "3"
-        },
-        {
-          "id": 2,
-          "userComment": "Can be better",
-          "userName": "Tamara Hamrick",
-          "userRate": "3"
-        }
-      ],
-      "shortDesc": "Cool and fast lawn-mover"
-    },
-    {
-      "descriptions": "16\" Cutting width, 7-blade ball bearing reel, and 10\" Composite wheels; unbreakable Steel side plate\nIdeal for cutting bent grass- Bermuda, Zoysia, Centipede, St. Augustine, and Seashore paspalum\nBlades are made of Alloy Steel for staying sharp longer\nAdjustable cutting Height of 0.5\"-2.5\" For a clean, even cut every time\nEco-friendly alternative to gas-powered lawn and garden equipment",
-      "id": 221,
-      "type": "Appliances",
-      "image": "/assets/images/lawn-mover.jpg",
-      "name": "Lawn-mower",
-      "price": 415.56,
-      "rate": 3,
-      "reviews": [
-        {
-          "id": 1,
-          "userComment": "Not the best...",
-          "userName": "Angela Owen",
-          "userRate": "3"
-        },
-        {
-          "id": 2,
-          "userComment": "Can be better",
-          "userName": "Tamara Hamrick",
-          "userRate": "3"
-        }
-      ],
-      "shortDesc": "Cool and fast lawn-mover"
     }
   ],
   "goods": [

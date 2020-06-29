@@ -50,13 +50,16 @@
   </div>
 </mat-dialog-content>
 
-<mat-dialog-actions>
-  <button
-    class="product-buy-button"
-    mat-flat-button
-    [color]="'primary'"
-    (click)="onSelect(product)"
-  >
-    Buy now
-  </button>
-</mat-dialog-actions>
+<ng-container *ngIf="itemInCart$ | async as itemInCart">
+  <mat-dialog-actions>
+    <button
+      class="product-buy-button"
+      mat-flat-button
+      [disabled]="!!itemInCart.length"
+      [color]="'primary'"
+      (click)="onSelect(product)"
+    >
+      {{ itemInCart.length ? 'Added to Cart' : 'Buy now' }}
+    </button>
+  </mat-dialog-actions>
+</ng-container>
