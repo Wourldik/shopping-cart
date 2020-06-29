@@ -6,17 +6,16 @@ import {
   OnDestroy,
 } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { debounceTime, takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 
 import { FilterFormService } from '../../services';
 import { filterFormKeys } from '../../contanst';
 import {
   priceRanges,
   productTypes,
-} from '../../../../../../features/http-data/entities/products/constants';
-
+} from '@features/http-data/entities/products/constants';
 import { IFilterFormValue } from '../../interfaces';
-import { debounceTime, takeUntil } from 'rxjs/operators';
-import { Subject } from 'rxjs';
 
 @Component({
   selector: 'sc-product-filters',

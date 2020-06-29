@@ -1,12 +1,12 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { PageEvent } from '@angular/material/paginator';
-
-import { Products } from '../../../../features/http-data/entities/products/models';
-import { ProductsService } from '../../../../features/http-data/entities/products/services';
 import { switchMap } from 'rxjs/operators';
+
+import { Products } from '@features/http-data/entities/products/models';
+import { ProductsService } from '@features/http-data/entities/products/services';
 import { IFilterFormValue } from './interfaces';
-import { IProductQueryParams } from '../../../../features/http-data/entities/products/interfaces';
+import { IProductQueryParams } from '@features/http-data/entities/products/interfaces';
 
 @Component({
   selector: 'sc-products-page',

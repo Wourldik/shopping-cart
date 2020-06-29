@@ -4,7 +4,7 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { takeUntil } from 'rxjs/operators';
 
 import { ProductShowMoreDialogComponent } from '../product-show-more-dialog.component';
-import { Product } from '../../../../../../../../../../../features/http-data/entities/products/models';
+import { Product } from '@features/http-data/entities/products/models';
 
 @Injectable()
 export class OpenProductShowMoreDialogService implements OnDestroy {

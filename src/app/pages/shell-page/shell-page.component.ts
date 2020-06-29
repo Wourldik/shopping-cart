@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 
-import { LoadCart } from '../../features/store/cart/actions';
-import { IState } from '../../features/store/cart/reducers';
+import { LoadCart } from '@features/store/cart/actions';
+import { IState } from '@features/store/cart/reducers';
 
 @Component({
   selector: 'sc-shell-page-component',

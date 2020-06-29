@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
-import { Review } from '../../../../../../../../../../../../../../features/http-data/entities/products/models';
+import { Review } from '@features/http-data/entities/products/models';
 
 @Component({
   selector: 'sc-product-review-item',

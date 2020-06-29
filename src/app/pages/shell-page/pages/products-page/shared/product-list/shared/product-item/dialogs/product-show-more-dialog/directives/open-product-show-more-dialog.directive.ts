@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 
 import { OpenProductShowMoreDialogService } from '../services';
-import { Product } from '../../../../../../../../../../../features/http-data/entities/products/models';
+import { Product } from '@features/http-data/entities/products/models';
 
 @Directive({
   selector: '[scOpenProductShowMoreDialog]',

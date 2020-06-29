@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import {
   Product,
   Products,
-} from '../../../../../../features/http-data/entities/products/models';
+} from '@features/http-data/entities/products/models';
 
 @Component({
   selector: 'sc-product-list',

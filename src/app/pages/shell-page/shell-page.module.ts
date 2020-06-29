@@ -7,8 +7,8 @@ import {
   ShellPageRoutingModule,
 } from './shell-page-routing.module';
 import { SharedModule } from '@shared/modules';
-import { reducers } from '../../features/store/cart/reducers';
-import { effects } from '../../features/store/cart/effects';
+import { reducers } from '@features/store/cart/reducers';
+import { effects } from '@features/store/cart/effects';
 import { LayoutModule } from '../../layout/layout.module';
 
 @NgModule({

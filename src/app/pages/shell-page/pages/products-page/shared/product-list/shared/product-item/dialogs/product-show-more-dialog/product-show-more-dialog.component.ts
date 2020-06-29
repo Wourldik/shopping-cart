@@ -9,18 +9,18 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 import { Store } from '@ngrx/store';
 import { Observable, Subject } from 'rxjs';
+import { filter, map, takeUntil, tap } from 'rxjs/operators';
 
-import { Product } from '../../../../../../../../../../features/http-data/entities/products/models';
-import { IState } from '../../../../../../../../../../features/store/cart/reducers';
-import { CartEffects } from '../../../../../../../../../../features/store/cart/effects';
-import { NotificationService } from '../../../../../../../../../../features/notification/services';
+import { Product } from '@features/http-data/entities/products/models';
+import { IState } from '@features/store/cart/reducers';
+import { CartEffects } from '@features/store/cart/effects';
+import { NotificationService } from '@features/notification/services';
 import {
   ADD_TO_CART_SUCCESS,
   AddToCart,
   LoadCart,
-} from '../../../../../../../../../../features/store/cart/actions';
-import { filter, map, takeUntil, tap } from 'rxjs/operators';
-import { getData } from '../../../../../../../../../../features/store/cart/selectors';
+} from '@features/store/cart/actions';
+import { getData } from '@features/store/cart/selectors';
 
 @Component({
   selector: 'sc-product-show-more-dialog',

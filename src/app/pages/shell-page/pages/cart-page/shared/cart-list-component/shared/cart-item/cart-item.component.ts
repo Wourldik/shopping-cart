@@ -8,7 +8,7 @@ import {
 } from '@angular/core';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 
-import { Product } from '../../../../../../../../features/http-data/entities/products/models';
+import { Product } from '@features/http-data/entities/products/models';
 
 @Component({
   selector: 'sc-cart-item',
