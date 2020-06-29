@@ -1,6 +1,6 @@
 import { IProductQueryParamsBackend } from '../interfaces/product-query-params-backend';
 
-export const limitQueryParamsToBackend: {
+export const productQueryParamsToBackend: {
   readonly [key: string]: keyof Required<IProductQueryParamsBackend>;
 } = {
   pageSize: '_limit',

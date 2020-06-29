@@ -15,7 +15,7 @@ import {
 } from '../../../../../../features/http-data/entities/products/constants';
 
 import { IFilterFormValue } from '../../interfaces';
-import { debounceTime, distinctUntilChanged, takeUntil } from 'rxjs/operators';
+import { debounceTime, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 
 @Component({

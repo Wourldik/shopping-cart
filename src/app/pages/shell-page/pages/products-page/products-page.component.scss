@@ -10,3 +10,9 @@
   overflow: auto;
   flex-direction: row;
 }
+
+.product-filters-wrapper {
+  background-color: white;
+  border: $border-size solid $border-color;
+  margin: $medium-grid-gap;
+}

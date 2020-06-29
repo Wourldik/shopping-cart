@@ -4,9 +4,15 @@ $max-container-width: 272px;
 
 :host {
   @extend %grow-column;
+}
+
+.filter-wrapper {
   max-width: $max-container-width;
-  padding: $medium-grid-gap;
   height: 100%;
   flex: 1 0 auto;
-  background-color: white;
+  padding: $medium-grid-gap $large-grid-gap;
+}
+
+.filter-form-field {
+  width: 85%;
 }
