@@ -15,7 +15,7 @@
     "paths": {
       "@environment/environment": ["src/environments/environment"],
       "@shared/modules": ["src/app/shared/modules"],
-      "@layout/*": ["src/app/layout/*"],
+      "@core/helpers": ["src/app/core/helpers"],
       "@features/*": ["src/app/features/*"]
     },
     "strict": true,

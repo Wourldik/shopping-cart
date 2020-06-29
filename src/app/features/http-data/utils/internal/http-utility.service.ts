@@ -5,7 +5,7 @@ import { Observable, of } from 'rxjs';
 
 import { NotificationService } from '../../../notification';
 import { HttpDataModule } from '../../http-data.module';
-import { stringify } from '../../../../core/helpers/stringify';
+import { stringify } from '@core/helpers';
 
 @Injectable({
   providedIn: HttpDataModule,

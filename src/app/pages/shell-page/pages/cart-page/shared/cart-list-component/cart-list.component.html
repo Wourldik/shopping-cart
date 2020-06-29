@@ -7,7 +7,10 @@
       class="product-item"
     ></sc-cart-item>
 
-    <div class="total-price-wrapper flex-column">
+    <div
+      class="total-price-wrapper flex-column"
+      *ngIf="totalPrice; else noOneAdded"
+    >
       <div class="total-price-container flex-row text-bold">
         <div class="description">
           Total:
@@ -18,5 +21,9 @@
         <div>{{ totalPrice | number: '1.0-2' }} $</div>
       </div>
     </div>
+
+    <ng-template #noOneAdded>
+      <div class="text-capitalize text-center flex-column">Cart is empty</div>
+    </ng-template>
   </div>
 </div>

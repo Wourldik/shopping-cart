@@ -1,4 +1,4 @@
-import { IProductQueryParamsBackend } from '../interfaces/product-query-params-backend';
+import { IProductQueryParamsBackend } from '../interfaces';
 
 export const productQueryParamsToBackend: {
   readonly [key: string]: keyof Required<IProductQueryParamsBackend>;

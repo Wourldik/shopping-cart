@@ -16,7 +16,7 @@ import {
   LoadCartFail,
   LoadCartSuccess,
 } from '../actions';
-import { CartService } from '../services/cart.service';
+import { CartService } from '../services';
 
 @Injectable()
 export class CartEffects {

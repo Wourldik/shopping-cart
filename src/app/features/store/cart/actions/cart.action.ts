@@ -1,4 +1,3 @@
-// load cart
 // tslint:disable:ext-variable-name
 import { Action } from '@ngrx/store';
 

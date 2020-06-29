@@ -1,13 +1,11 @@
 import { Injectable } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Observable } from 'rxjs';
 
 import { filterFormKeys } from '../contanst';
 import { IFilterFormValue } from '../interfaces';
-import { Observable } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class FilterFormService {
   get form(): FormGroup {
     return this._form;

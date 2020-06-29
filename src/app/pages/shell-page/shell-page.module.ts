@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
 
 import {
   routedComponents,
   ShellPageRoutingModule,
 } from './shell-page-routing.module';
 import { SharedModule } from '@shared/modules';
-import { LayoutModule } from '@layout/modules';
-import { StoreModule } from '@ngrx/store';
 import { reducers } from '../../features/store/cart/reducers';
-import { EffectsModule } from '@ngrx/effects';
 import { effects } from '../../features/store/cart/effects';
+import { LayoutModule } from '../../layout/layout.module';
 
 @NgModule({
   declarations: [routedComponents],

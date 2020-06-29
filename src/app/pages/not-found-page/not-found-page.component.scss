@@ -1,0 +1,27 @@
+@import 'src/styles/shared';
+
+$gap-top: 176px;
+$gap-bottom: 262px;
+
+:host {
+  @extend %grow-column;
+
+  height: 0;
+  overflow: auto;
+}
+
+.filler-top {
+  flex: 1 1 $gap-top;
+  display: flex;
+}
+
+.filler-bottom {
+  flex: 1 1 $gap-bottom;
+  display: flex;
+}
+
+.not-found-page-content {
+  padding: 0 $large-grid-gap $large-grid-gap $large-grid-gap;
+  flex: 0 0 auto;
+  align-items: center;
+}

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { RegisterSvgService } from '@features/svg-icons';
+import { RegisterSvgService } from './features/svg-icons/services';
 
 @Component({
   selector: 'sc-root',
