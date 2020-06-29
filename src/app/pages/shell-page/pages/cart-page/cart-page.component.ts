@@ -24,8 +24,6 @@ export class CartPageComponent implements OnInit {
 
   products$: Observable<Products | null>;
 
-  totalProducts: number;
-
   constructor(private store: Store<IState>) {}
 
   ngOnInit(): void {

@@ -10,12 +10,15 @@ import {
   AddToCartSuccess,
   DELETE_FROM_CART,
   DeleteFromCart,
+  DeleteFromCartFail,
   DeleteFromCartSuccess,
   LOAD_CART,
+  LoadCart,
   LoadCartFail,
   LoadCartSuccess,
 } from '../actions';
 import { CartService } from '../services/cart.service';
+import { getRandomId } from '../../../../core/helpers/get-random-id';
 
 @Injectable()
 export class CartEffects {
@@ -23,12 +26,15 @@ export class CartEffects {
     this.actions$.pipe(
       ofType(ADD_TO_CART),
       map((action: AddToCart) => action.payload),
-      switchMap(product =>
-        this.cartService.add(product).pipe(
-          map(() => new AddToCartSuccess(product)),
+      switchMap(product => {
+        // NOTE For correct work with json-server
+        const productWithUnicId = { ...product, id: getRandomId(1, 5000) };
+
+        return this.cartService.add(productWithUnicId).pipe(
+          map(() => new AddToCartSuccess(productWithUnicId)),
           catchError(err => of(new AddToCartFail(err)))
-        )
-      ),
+        );
+      }),
       share()
     )
   );
@@ -38,12 +44,11 @@ export class CartEffects {
       ofType(DELETE_FROM_CART),
       map((action: DeleteFromCart) => action.payload),
       switchMap(product =>
-        this.cartService.add(product).pipe(
+        this.cartService.delete(product).pipe(
           map(() => new DeleteFromCartSuccess(product)),
-          catchError(err => of(new DeleteFromCartSuccess(err)))
+          catchError(err => of(new DeleteFromCartFail(err)))
         )
-      ),
-      share()
+      )
     )
   );
 
@@ -55,7 +60,8 @@ export class CartEffects {
           map(product => new LoadCartSuccess(product)),
           catchError(err => of(new LoadCartFail(err)))
         )
-      )
+      ),
+      share()
     )
   );
 

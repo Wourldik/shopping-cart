@@ -1,7 +1,18 @@
 <mat-toolbar class="main-toolbar colored-toolbar">
-  <a mat-icon-button [routerLink]="'/'" class="logo-anchor">
+  <div class="filler"></div>
+  <a
+    mat-button
+    color="primary"
+    class="logo-button"
+    [routerLink]="['/products']"
+  >
     <mat-icon class="logo" [svgIcon]="'logo'"></mat-icon>
+    <span class="logo-text">Electronic shop</span>
   </a>
 
   <div class="filler"></div>
+
+  <ng-container *ngIf="products$ | async as products">
+    <sc-cart-icon [total]="products.length"></sc-cart-icon>
+  </ng-container>
 </mat-toolbar>

@@ -21,7 +21,7 @@ export class HttpUtilityService {
       return of(null);
     }
 
-    this.notificationService.showError('faf8a1c33aa4432c89490ffa6f7ccfba');
+    this.notificationService.showError('Unexpected response from the server');
 
     this.errorHandler.handleError(err);
 

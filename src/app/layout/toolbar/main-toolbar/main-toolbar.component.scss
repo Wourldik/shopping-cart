@@ -3,16 +3,18 @@
 .main-toolbar {
   font-size: 13px;
   position: relative;
+}
 
-  .logo-anchor {
-    border-radius: 0;
-    margin: 0 20px 0 $x-large-grid-gap;
+.logo {
+  width: 40px;
+  height: 50px;
+}
 
-    .logo {
-      width: auto;
-      height: 50px;
-      line-height: 50px;
-      margin: 0;
-    }
-  }
+.logo-button {
+  font-size: 20px;
+  color: #3f51b5;
+}
+
+.logo-text {
+  padding: $small-grid-gap $medium-grid-gap;
 }
