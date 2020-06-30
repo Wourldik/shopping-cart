@@ -1,5 +1,71 @@
 {
-  "usercart": [],
+  "usercart": [
+    {
+      "id": 4,
+      "type": "Video Games",
+      "image": "/assets/images/video-game.jpg",
+      "name": "Video game",
+      "price": 174.71,
+      "rate": 5,
+      "reviews": [
+        {
+          "id": 1,
+          "userComment": "Love it!",
+          "userName": "Angela Owen",
+          "userRate": "5"
+        },
+        {
+          "id": 2,
+          "userComment": "Best video game!",
+          "userName": "Steve Fisher",
+          "userRate": "5"
+        }
+      ],
+      "shortDesc": "New popular video game"
+    },
+    {
+      "descriptions": "16\" Cutting width, 7-blade ball bearing reel, and 10\" Composite wheels; unbreakable Steel side plate\nIdeal for cutting bent grass- Bermuda, Zoysia, Centipede, St. Augustine, and Seashore paspalum\nBlades are made of Alloy Steel for staying sharp longer\nAdjustable cutting Height of 0.5\"-2.5\" For a clean, even cut every time\nEco-friendly alternative to gas-powered lawn and garden equipment",
+      "id": 8,
+      "type": "Appliances",
+      "image": "/assets/images/lawn-mover.jpg",
+      "name": "Lawn-mower",
+      "price": 415.56,
+      "rate": 3,
+      "reviews": [
+        {
+          "id": 1,
+          "userComment": "Not the best...",
+          "userName": "Angela Owen",
+          "userRate": "3"
+        },
+        {
+          "id": 2,
+          "userComment": "Can be better",
+          "userName": "Tamara Hamrick",
+          "userRate": "3"
+        }
+      ],
+      "shortDesc": "Cool and fast lawn-mover"
+    },
+    {
+      "descriptions": "This product is not Apple certified, but has been professionally inspected and tested by Amazon-qualified suppliers. The product may have minimal scratches or dents, and a battery with at least 80% capacity. Box may be generic and accessories may not be original, but will be compatible and fully functional. This product is eligible for a replacement or refund within 90 days of receipt if you are not satisfied.",
+      "id": 6,
+      "type": "Phones",
+      "image": "/assets/images/iphone11.jpeg",
+      "name": "IPhone",
+      "price": 627.72,
+      "rate": 4,
+      "reviews": [
+        {
+          "id": 7,
+          "userComment": "Cool!",
+          "userName": "Craig Hensley",
+          "userRate": "4"
+        }
+      ],
+      "shortDesc": "Best Apple phone"
+    }
+  ],
   "goods": [
     {
       "id": 1,

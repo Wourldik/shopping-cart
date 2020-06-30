@@ -1,12 +1,14 @@
 <a mat-button [routerLink]="['/cart']" class="cart-button">
   Cart
 
-  <button
-    *ngIf="total"
-    mat-mini-fab
-    color="accent"
-    aria-label="Example icon button with a plus one icon"
-  >
-    {{ total }}
-  </button>
+  <ng-container *ngIf="products">
+    <button
+      *ngIf="products.length"
+      mat-mini-fab
+      color="accent"
+      aria-label="Example icon button with a plus one icon"
+    >
+      {{ products.length }}
+    </button>
+  </ng-container>
 </a>

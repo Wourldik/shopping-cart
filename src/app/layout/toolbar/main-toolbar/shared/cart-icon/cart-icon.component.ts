@@ -1,5 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
+import { Product } from '@features/http-data/entities/products/models';
+
 @Component({
   selector: 'sc-cart-icon',
   templateUrl: './cart-icon.component.html',
@@ -8,5 +10,5 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 })
 export class CartIconComponent {
   @Input()
-  total = 0;
+  products: Product[] | null;
 }

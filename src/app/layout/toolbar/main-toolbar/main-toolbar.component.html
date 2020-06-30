@@ -11,7 +11,5 @@
 
   <div class="filler"></div>
 
-  <ng-container *ngIf="products$ | async as products">
-    <sc-cart-icon [total]="products.length"></sc-cart-icon>
-  </ng-container>
+  <sc-cart-icon [products]="products"></sc-cart-icon>
 </mat-toolbar>

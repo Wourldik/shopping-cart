@@ -1,9 +1,5 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
-import { IState } from '@features/store/cart/reducers';
-import { getData } from '@features/store/cart/selectors';
 import { Product } from '@features/http-data/entities/products/models';
 
 @Component({
@@ -12,12 +8,7 @@ import { Product } from '@features/http-data/entities/products/models';
   styleUrls: ['./main-toolbar.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MainToolbarComponent implements OnInit {
-  products$: Observable<Product[]>;
-
-  constructor(private store: Store<IState>) {}
-
-  ngOnInit(): void {
-    this.products$ = this.store.select(getData);
-  }
+export class MainToolbarComponent {
+  @Input()
+  products: Product[] | null;
 }
